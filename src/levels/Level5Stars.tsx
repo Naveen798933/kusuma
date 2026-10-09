@@ -31,7 +31,7 @@ export const Level5Stars: React.FC = () => {
   const [isCompleted, setIsCompleted] = useState(false);
 
   const herInitial = CONFIG.herName ? CONFIG.herName.trim()[0].toUpperCase() : 'K';
-  const myInitial = CONFIG.myName ? CONFIG.myName.trim()[0].toUpperCase() : 'Y';
+  const myInitial = CONFIG.myName ? CONFIG.myName.trim()[0].toUpperCase() : 'N';
 
   const nextExpectedStar = connectedIndexes.length % HEART_STARS.length;
 

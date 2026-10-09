@@ -71,7 +71,7 @@ export const CONFIG: AppConfig = {
   // ==========================================
   herName: "Kusuma",                 // Her name
   herNickname: "Bestie",             // Sweet nickname
-  myName: "Your Best Friend",        // Your name
+  myName: "Naveen",                  // Your name
   anniversaryDate: "Day 1 of Our Friendship",
   proposalDate: "Today & Always",
 
