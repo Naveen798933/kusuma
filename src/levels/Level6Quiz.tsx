@@ -46,16 +46,16 @@ export const Level6Quiz: React.FC = () => {
       title="Guess Me 💭"
       subtitle="How well do you know us? (No wrong answers can break my heart!)"
       badge={
-        <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-hot/20 border border-rose-hot/40 text-xs font-semibold text-rose-blush">
+        <div className="flex items-center gap-1.5 px-3.5 py-1 rounded-full glass-pill border border-rose-hot/40 text-xs font-semibold text-rose-blush shadow-sm">
           <HelpCircle className="w-3.5 h-3.5 text-gold-accent" />
           <span>Question {currentQIndex + 1} of {questions.length}</span>
         </div>
       }
     >
-      <div className="w-full max-w-sm glass-card p-4 sm:p-5 rounded-3xl border border-rose-soft/20 shadow-2xl flex flex-col items-center">
+      <div className="w-full max-w-sm glass-card p-5 rounded-3xl border border-white/20 shadow-2xl flex flex-col items-center">
         {/* Question Text */}
         <div className="w-full text-center mb-4 min-h-[50px] flex items-center justify-center">
-          <h3 className="text-base sm:text-lg font-bold text-white leading-snug">
+          <h3 className="text-base sm:text-lg font-bold text-white leading-snug drop-shadow-sm">
             {currentQuestion.question}
           </h3>
         </div>
@@ -69,10 +69,10 @@ export const Level6Quiz: React.FC = () => {
                 key={`${currentQIndex}-${idx}`}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => handleOptionSelect(idx)}
-                className={`w-full py-3 px-4 rounded-2xl text-left text-xs sm:text-sm font-medium border transition-all duration-200 flex items-center justify-between ${
+                className={`w-full py-3.5 px-4 rounded-2xl text-left text-xs sm:text-sm font-medium border transition-all duration-200 flex items-center justify-between cursor-pointer ${
                   isMarkedWrong
-                    ? 'bg-rose-hot/10 border-rose-hot/40 text-rose-blush/70'
-                    : 'bg-white/10 hover:bg-white/15 border-white/15 text-white active:bg-rose-hot/20'
+                    ? 'bg-rose-hot/15 border-rose-hot/40 text-rose-blush/80'
+                    : 'glass-pill hover:border-rose-hot/40 text-white active:bg-rose-hot/20 shadow-sm'
                 }`}
                 style={{ touchAction: 'manipulation' }}
               >

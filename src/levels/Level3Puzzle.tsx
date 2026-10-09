@@ -108,14 +108,14 @@ export const Level3Puzzle: React.FC = () => {
       }
       badge={
         <div className="flex items-center gap-2">
-          <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-hot/20 border border-rose-hot/40 text-xs font-semibold text-rose-blush shadow-sm">
+          <div className="flex items-center gap-1.5 px-3.5 py-1 rounded-full glass-pill border border-rose-hot/40 text-xs font-semibold text-rose-blush shadow-sm">
             <Sparkles className="w-3.5 h-3.5 text-gold-accent" />
             <span>{selectedTileIndex !== null ? 'Tile Selected 👆' : 'Tap 2 tiles to swap'}</span>
           </div>
           {canAutoSolve && !isSolved && (
             <button
               onClick={handleAutoSolve}
-              className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-gold-accent/20 border border-gold-accent/50 text-[11px] font-bold text-gold-accent hover:bg-gold-accent/30 active:scale-95 transition-all shadow-sm cursor-pointer"
+              className="flex items-center gap-1 px-3 py-1 rounded-full glass-pill border border-gold-accent/50 text-[11px] font-bold text-gold-accent hover:border-gold-accent active:scale-95 transition-all shadow-sm cursor-pointer"
             >
               <Wand2 className="w-3 h-3" />
               <span>Magic Solve</span>
@@ -124,7 +124,7 @@ export const Level3Puzzle: React.FC = () => {
         </div>
       }
     >
-      <div className="w-full max-w-[320px] aspect-square glass-card p-3 rounded-3xl border border-rose-soft/20 shadow-2xl relative flex items-center justify-center">
+      <div className="w-full max-w-[320px] aspect-square glass-card p-3 rounded-3xl border border-white/20 shadow-2xl relative flex items-center justify-center">
         {/* The 3x3 Puzzle Grid */}
         <div className="grid grid-cols-3 grid-rows-3 gap-1.5 w-full h-full rounded-2xl overflow-hidden relative">
           {tiles.map((tile, currentIndex) => {

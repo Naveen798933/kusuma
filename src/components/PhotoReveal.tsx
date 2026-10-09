@@ -75,12 +75,12 @@ export const PhotoReveal: React.FC = () => {
         transition={{ delay: 0.15 }}
         className="text-center mb-3"
       >
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-accent/20 border border-gold-accent/40 text-gold-accent text-xs font-bold uppercase tracking-wider mb-1">
+        <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full glass-pill border border-gold-accent/40 text-gold-accent text-xs font-bold uppercase tracking-wider mb-1 shadow-[0_0_15px_rgba(255,207,107,0.25)]">
           <Sparkles className="w-3.5 h-3.5 text-gold-accent" />
           <span>Level {currentLevel} Completed!</span>
           <Heart className="w-3.5 h-3.5 text-rose-hot fill-rose-hot" />
         </div>
-        <h3 className="text-xl font-bold text-white font-sans">
+        <h3 className="text-xl font-extrabold text-white font-sans drop-shadow-md">
           Memory Unlocked 💫
         </h3>
       </motion.div>
@@ -93,9 +93,9 @@ export const PhotoReveal: React.FC = () => {
         className="polaroid-frame w-full max-w-[310px] mx-auto transition-transform hover:rotate-0 relative shadow-2xl"
       >
         {/* Pastel Washi Tape Sticker */}
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-5 bg-gradient-to-r from-amber-100/85 via-rose-100/90 to-amber-100/85 -rotate-2 shadow-sm border border-white/50 backdrop-blur-sm z-20 pointer-events-none rounded-[2px]" />
+        <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-5 bg-gradient-to-r from-amber-100/90 via-rose-100/95 to-amber-100/90 -rotate-2 shadow-sm border border-white/60 backdrop-blur-sm z-20 pointer-events-none rounded-[2px]" />
 
-        <div className="relative aspect-square w-full rounded-lg overflow-hidden bg-plum-900 border border-black/10 shadow-inner">
+        <div className="relative aspect-square w-full rounded-xl overflow-hidden bg-plum-900 border border-black/10 shadow-inner">
           <img
             src={imageSrc}
             alt={currentConfig.photoAlt}
@@ -109,7 +109,7 @@ export const PhotoReveal: React.FC = () => {
             loading="eager"
           />
           {/* Heart watermark badge in corner */}
-          <div className="absolute top-2 right-2 p-1.5 rounded-full bg-black/40 backdrop-blur-md text-xs text-rose-hot">
+          <div className="absolute top-2.5 right-2.5 p-1.5 rounded-full bg-black/40 backdrop-blur-md text-xs text-rose-hot border border-white/20">
             💖
           </div>
         </div>
@@ -123,7 +123,7 @@ export const PhotoReveal: React.FC = () => {
             href={imageSrc}
             download={`Memory_${currentConfig.id}_Kusuma.jpg`}
             onClick={() => sound.playTap()}
-            className="inline-flex items-center gap-1 text-[11px] font-semibold text-plum-800/60 hover:text-plum-900 mt-1 transition-colors cursor-pointer"
+            className="inline-flex items-center gap-1 text-[11px] font-semibold text-plum-800/70 hover:text-plum-900 mt-1 transition-colors cursor-pointer"
             title="Save this photo"
           >
             <Download className="w-3 h-3" />
@@ -137,7 +137,7 @@ export const PhotoReveal: React.FC = () => {
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.45 }}
-        className="glass-card mt-3.5 p-3.5 rounded-2xl w-full border border-rose-soft/30 text-center relative"
+        className="glass-card mt-3.5 p-4 rounded-3xl w-full border border-white/20 shadow-xl text-center relative"
       >
         <p className="text-xs sm:text-sm text-rose-blush leading-relaxed font-sans font-medium min-h-[50px]">
           <Typewriter
@@ -159,7 +159,7 @@ export const PhotoReveal: React.FC = () => {
         >
           <button
             onClick={handleNext}
-            className="w-full py-3 px-6 rounded-2xl bg-gradient-to-r from-rose-hot via-rose-glow to-rose-hot bg-[length:200%_auto] text-white font-bold text-sm tracking-wide shadow-lg shadow-rose-hot/40 flex items-center justify-center gap-2 active:scale-95 transition-all animate-glow hover:opacity-95"
+            className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-rose-hot via-rose-glow to-rose-hot text-white font-extrabold text-sm tracking-wider uppercase shadow-[0_0_30px_rgba(255,77,141,0.55),inset_0_1px_1.5px_rgba(255,255,255,0.6)] border border-white/30 flex items-center justify-center gap-2 active:scale-95 hover:brightness-105 transition-all cursor-pointer"
           >
             <span>
               {currentLevel < 7 ? `Continue to Level ${currentLevel + 1}` : 'Enter The Final Level 🌟'}

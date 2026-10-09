@@ -135,9 +135,9 @@ export const SplashScreen: React.FC = () => {
         initial={{ y: 15, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.3 }}
-        className="glass-card p-4 rounded-2xl mb-4 max-w-xs border border-rose-soft/20 shadow-lg"
+        className="glass-card p-4.5 rounded-3xl mb-4 max-w-xs border border-white/20 shadow-xl"
       >
-        <p className="text-xs sm:text-sm text-rose-blush/90 leading-relaxed font-sans">
+        <p className="text-xs sm:text-sm text-rose-blush/95 leading-relaxed font-sans font-medium">
           "I made a small game for you 🎮. Complete all 7 levels to unlock a very special surprise."
         </p>
       </motion.div>
@@ -145,7 +145,7 @@ export const SplashScreen: React.FC = () => {
       {/* Volume hint */}
       <div className="flex items-center gap-1.5 text-[11px] text-rose-blush/80 mb-5 font-medium">
         <Volume2 className="w-3.5 h-3.5 text-gold-accent" />
-        <span>Turn up your volume for romantic music & SFX 🎵</span>
+        <span>Turn up your volume for music & SFX 🎵</span>
       </div>
 
       {/* Name Input & Start Form */}
@@ -166,16 +166,16 @@ export const SplashScreen: React.FC = () => {
               value={inputName}
               onChange={(e) => setInputName(e.target.value)}
               placeholder="Your name"
-              className="w-full px-4 py-3 rounded-xl bg-plum-800/80 border border-rose-soft/30 text-white placeholder-white/30 text-sm focus:outline-none focus:border-rose-hot focus:ring-2 focus:ring-rose-hot/20 transition-all text-center font-medium shadow-inner"
+              className="glass-input w-full px-4 py-3.5 rounded-2xl text-white placeholder-white/40 text-sm transition-all text-center font-semibold"
               required
             />
-            <Heart className="w-4 h-4 text-rose-hot absolute right-3.5 top-1/2 -translate-y-1/2 fill-rose-hot opacity-60 pointer-events-none" />
+            <Heart className="w-4 h-4 text-rose-hot absolute right-4 top-1/2 -translate-y-1/2 fill-rose-hot opacity-70 pointer-events-none" />
           </div>
         </div>
 
         <button
           type="submit"
-          className="w-full py-3.5 px-6 rounded-2xl bg-gradient-to-r from-rose-hot via-rose-glow to-rose-hot bg-[length:200%_auto] text-white font-bold text-sm tracking-wide shadow-[0_0_25px_rgba(255,77,141,0.4)] flex items-center justify-center gap-2 active:scale-95 transition-all hover:opacity-95 cursor-pointer"
+          className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-rose-hot via-rose-glow to-rose-hot text-white font-extrabold text-sm tracking-wider uppercase shadow-[0_0_30px_rgba(255,77,141,0.55),inset_0_1px_1.5px_rgba(255,255,255,0.6)] border border-white/30 flex items-center justify-center gap-2 active:scale-95 hover:brightness-105 transition-all cursor-pointer"
         >
           <Play className="w-4 h-4 fill-white" />
           <span>START ADVENTURE</span>
@@ -189,7 +189,7 @@ export const SplashScreen: React.FC = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
-            className="mt-4 p-3 rounded-2xl bg-black/80 border border-gold-accent/40 max-w-xs w-full text-center"
+            className="mt-4 p-3 rounded-2xl glass-card border border-gold-accent/40 max-w-xs w-full text-center"
           >
             <div className="text-[11px] text-gold-accent font-bold uppercase tracking-wider mb-2">
               ⚡ Quick Jump (Testing Mode)
@@ -199,7 +199,7 @@ export const SplashScreen: React.FC = () => {
                 <button
                   key={lvl}
                   onClick={() => jumpToLevel(lvl)}
-                  className="px-2.5 py-1 rounded-lg bg-white/10 hover:bg-rose-hot text-xs font-semibold text-white transition-colors"
+                  className="px-2.5 py-1 rounded-xl bg-white/10 hover:bg-rose-hot text-xs font-semibold text-white transition-colors border border-white/10"
                 >
                   L{lvl} {lvl === 7 ? '🌟' : ''}
                 </button>
@@ -214,17 +214,11 @@ export const SplashScreen: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="mt-4 p-3 rounded-xl bg-black/70 border border-gold-accent/40 text-xs text-gold-accent"
+          className="mt-4 p-3 rounded-2xl glass-pill border border-gold-accent/40 text-xs text-gold-accent"
         >
           {CONFIG.secretEasterEggMessage}
         </motion.div>
       )}
-
-      {/* Gentle Footer note */}
-      <div className="mt-8 text-[11px] text-white/40 flex items-center gap-1">
-        <span>A customized love story coded with</span>
-        <Heart className="w-3 h-3 text-rose-hot fill-rose-hot inline" />
-      </div>
     </motion.div>
   );
 };

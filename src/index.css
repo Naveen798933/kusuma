@@ -5,60 +5,201 @@
 @layer base {
   * {
     -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
   }
   
   html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     overscroll-behavior-y: none;
     user-select: none;
     -webkit-user-select: none;
+    background-color: #0d0417;
   }
 
-  /* Romantic glass card */
+  /* ============================================================== */
+  /* ✨ ULTRA-PREMIUM FROSTED GLASSMORPHISM THEME SYSTEM ✨          */
+  /* ============================================================== */
+
+  /* Master Glass Card: Deep frosted acrylic with top specular highlight */
   .glass-card {
-    background: rgba(38, 18, 62, 0.65);
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.12) 0%,
+      rgba(255, 255, 255, 0.04) 40%,
+      rgba(38, 18, 62, 0.70) 100%
+    );
+    backdrop-filter: blur(24px) saturate(190%);
+    -webkit-backdrop-filter: blur(24px) saturate(190%);
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    box-shadow: 
+      inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.40),
+      inset 0 -1px 1px 0 rgba(0, 0, 0, 0.30),
+      0 20px 40px -15px rgba(0, 0, 0, 0.60),
+      0 0 25px rgba(255, 77, 141, 0.15);
+  }
+
+  /* Interactive Glass Card with hover lift and luminous edge */
+  .glass-card-interactive {
+    transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .glass-card-interactive:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.16) 0%,
+      rgba(255, 255, 255, 0.06) 50%,
+      rgba(61, 29, 96, 0.75) 100%
+    );
+    border-color: rgba(255, 117, 160, 0.45);
+    box-shadow: 
+      inset 0 1px 2px 0 rgba(255, 255, 255, 0.50),
+      0 25px 50px -12px rgba(0, 0, 0, 0.70),
+      0 0 35px rgba(255, 77, 141, 0.30);
+    transform: translateY(-2px);
+  }
+
+  /* Frosted Glass Pill Capsule */
+  .glass-pill {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.16) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    ), rgba(13, 4, 23, 0.45);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: 
+      inset 0 1px 1px rgba(255, 255, 255, 0.45),
+      0 6px 18px rgba(0, 0, 0, 0.35);
+  }
+
+  /* Crystalline Glass Input */
+  .glass-input {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.02) 100%
+    ), rgba(26, 11, 46, 0.65);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 117, 160, 0.25);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 77, 141, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 
+      inset 0 2px 4px rgba(0, 0, 0, 0.4),
+      inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    transition: all 0.2s ease;
+  }
+  .glass-input:focus {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.12) 0%,
+      rgba(255, 255, 255, 0.04) 100%
+    ), rgba(38, 18, 62, 0.85);
+    border-color: rgba(255, 77, 141, 0.65);
+    box-shadow: 
+      inset 0 2px 4px rgba(0, 0, 0, 0.3),
+      0 0 20px rgba(255, 77, 141, 0.35);
   }
 
-  .glass-pill {
-    background: rgba(255, 255, 255, 0.08);
+  /* Shimmering Glass Action Button */
+  .glass-button {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.20) 0%,
+      rgba(255, 255, 255, 0.06) 100%
+    ), rgba(255, 77, 141, 0.25);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    box-shadow: 
+      inset 0 1px 1.5px rgba(255, 255, 255, 0.50),
+      0 8px 24px rgba(0, 0, 0, 0.35);
+    transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .glass-button:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.28) 0%,
+      rgba(255, 255, 255, 0.10) 100%
+    ), rgba(255, 77, 141, 0.40);
+    border-color: rgba(255, 255, 255, 0.50);
+    box-shadow: 
+      inset 0 1px 2px rgba(255, 255, 255, 0.65),
+      0 12px 30px rgba(255, 77, 141, 0.45);
+  }
+
+  /* Floating Dock Glass Footer */
+  .glass-footer {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.14) 0%,
+      rgba(255, 255, 255, 0.04) 50%,
+      rgba(13, 4, 23, 0.75) 100%
+    );
+    backdrop-filter: blur(20px) saturate(200%);
+    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    box-shadow: 
+      inset 0 1px 1px rgba(255, 255, 255, 0.45),
+      0 12px 35px rgba(0, 0, 0, 0.55),
+      0 0 20px rgba(255, 77, 141, 0.18);
+  }
+
+  /* Polaroid Glass Hybrid Frame */
+  .polaroid-frame {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.96) 0%,
+      rgba(255, 245, 250, 0.92) 85%,
+      rgba(255, 235, 245, 0.88) 100%
+    );
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-  }
-
-  /* Polaroid style photo frame */
-  .polaroid-frame {
-    background: #ffffff;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45), 0 0 25px rgba(255, 77, 141, 0.2);
-    border-radius: 12px;
+    box-shadow: 
+      0 20px 45px -10px rgba(0, 0, 0, 0.55),
+      0 0 30px rgba(255, 77, 141, 0.25),
+      inset 0 1px 2px rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
     padding: 12px 12px 24px 12px;
   }
 
-  /* Custom animated glow */
+  /* Glowing accents */
   .glow-rose {
-    filter: drop-shadow(0 0 10px rgba(255, 77, 141, 0.7));
+    filter: drop-shadow(0 0 12px rgba(255, 77, 141, 0.85));
   }
 
   .glow-gold {
-    filter: drop-shadow(0 0 10px rgba(255, 207, 107, 0.8));
+    filter: drop-shadow(0 0 12px rgba(255, 207, 107, 0.90));
+  }
+
+  .glow-cyan {
+    filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.85));
+  }
+
+  /* Text Glow utilities */
+  .text-glow-rose {
+    text-shadow: 0 0 15px rgba(255, 77, 141, 0.7), 0 0 30px rgba(255, 77, 141, 0.35);
+  }
+
+  .text-glow-gold {
+    text-shadow: 0 0 15px rgba(255, 207, 107, 0.8), 0 0 30px rgba(255, 207, 107, 0.4);
   }
 }
 
-/* Custom romantic scrollbar if needed */
+/* Custom romantic smooth scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: #0d0417;
+  background: rgba(13, 4, 23, 0.6);
 }
 ::-webkit-scrollbar-thumb {
-  background: #ff4d8d;
+  background: linear-gradient(180deg, #ff4d8d, #ffcf6b);
   border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff4d8d;
 }

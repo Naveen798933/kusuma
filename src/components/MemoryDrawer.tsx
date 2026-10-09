@@ -36,10 +36,10 @@ export const MemoryDrawer: React.FC<MemoryDrawerProps> = ({ isOpen, onClose }) =
             initial={{ scale: 0.9, y: 20 }}
             animate={{ scale: 1, y: 0 }}
             exit={{ scale: 0.9, y: 20 }}
-            className="glass-card w-full max-w-md max-h-[85vh] rounded-3xl p-5 flex flex-col border border-rose-soft/30 shadow-2xl overflow-hidden"
+            className="glass-card w-full max-w-md max-h-[85vh] rounded-3xl p-5 flex flex-col border border-white/25 shadow-2xl overflow-hidden"
           >
             {/* Header */}
-            <div className="flex items-center justify-between border-b border-white/10 pb-3 mb-4">
+            <div className="flex items-center justify-between border-b border-white/15 pb-3 mb-4">
               <div className="flex items-center gap-2">
                 <span className="text-2xl">📖</span>
                 <div>
@@ -57,7 +57,7 @@ export const MemoryDrawer: React.FC<MemoryDrawerProps> = ({ isOpen, onClose }) =
                   sound.playTap();
                   onClose();
                 }}
-                className="p-1.5 rounded-full bg-white/10 text-white/70 hover:text-white active:scale-95 transition-all"
+                className="p-1.5 rounded-full glass-pill hover:border-white/40 text-white/80 hover:text-white active:scale-95 transition-all"
                 aria-label="Close Scrapbook"
               >
                 <X className="w-4 h-4" />
@@ -75,10 +75,10 @@ export const MemoryDrawer: React.FC<MemoryDrawerProps> = ({ isOpen, onClose }) =
                     key={lvl.id}
                     className={`rounded-2xl p-3 border transition-all flex items-center gap-3 ${
                       isCompleted
-                        ? 'bg-white/10 border-rose-soft/30 hover:bg-white/15'
+                        ? 'glass-pill hover:border-rose-hot/50'
                         : isCurrent
-                        ? 'bg-rose-hot/15 border-rose-hot/40'
-                        : 'bg-black/30 border-white/5 opacity-50'
+                        ? 'bg-rose-hot/20 border border-rose-hot/50 shadow-[0_0_15px_rgba(255,77,141,0.25)]'
+                        : 'bg-black/35 border-white/10 opacity-55'
                     }`}
                   >
                     {/* Thumbnail or Lock icon */}

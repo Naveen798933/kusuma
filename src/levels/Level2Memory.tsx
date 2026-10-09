@@ -116,13 +116,13 @@ export const Level2Memory: React.FC = () => {
       title="Memory Lane 🧠"
       subtitle="Find all 6 pairs of memories we cherish"
       badge={
-        <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-hot/20 border border-rose-hot/40 text-xs font-semibold text-rose-blush">
+        <div className="flex items-center gap-1.5 px-3.5 py-1 rounded-full glass-pill border border-rose-hot/40 text-xs font-semibold text-rose-blush shadow-sm">
           <Sparkles className="w-3.5 h-3.5 text-gold-accent" />
           <span>Pairs Matched: {matchesCount} / {PAIRS.length}</span>
         </div>
       }
     >
-      <div className="w-full glass-card p-3 sm:p-4 rounded-3xl border border-rose-soft/20 shadow-2xl flex flex-col items-center">
+      <div className="w-full glass-card p-3 sm:p-4 rounded-3xl border border-white/20 shadow-2xl flex flex-col items-center">
         {/* 3x4 Grid of cards */}
         <div className="grid grid-cols-4 gap-2 sm:gap-2.5 w-full max-w-[340px]">
           {cards.map((card) => {
@@ -134,10 +134,10 @@ export const Level2Memory: React.FC = () => {
                 onClick={() => handleCardClick(card)}
                 className={`aspect-square rounded-2xl flex items-center justify-center text-2xl sm:text-3xl relative transition-all duration-300 cursor-pointer shadow-md border ${
                   card.isMatched
-                    ? 'bg-rose-hot/25 border-rose-hot/60 opacity-90 shadow-[0_0_12px_rgba(255,77,141,0.4)]'
+                    ? 'bg-rose-hot/25 border-rose-hot/60 opacity-90 shadow-[0_0_15px_rgba(255,77,141,0.5)]'
                     : isRevealed
-                    ? 'bg-plum-700 border-gold-accent/50'
-                    : 'bg-white/10 hover:bg-white/15 border-white/20 active:scale-95'
+                    ? 'glass-card border-gold-accent/50 shadow-[0_0_15px_rgba(255,207,107,0.3)]'
+                    : 'glass-pill hover:border-white/40 active:scale-95'
                 }`}
                 style={{ touchAction: 'manipulation' }}
                 aria-label={`Memory card ${card.id}`}

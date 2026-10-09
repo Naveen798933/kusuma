@@ -50,14 +50,15 @@ export const BackgroundParticles: React.FC = () => {
       <motion.div
         animate={{ x: mouseOffset.x * 1.5, y: mouseOffset.y * 1.5 }}
         transition={{ type: 'spring', damping: 30 }}
-        className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-rose-hot/15 blur-3xl animate-pulse-slow"
+        className="absolute -top-32 -left-32 w-[28rem] h-[28rem] rounded-full bg-rose-hot/20 blur-[100px] animate-pulse-slow"
       />
       <motion.div
         animate={{ x: -mouseOffset.x * 1.5, y: -mouseOffset.y * 1.5 }}
         transition={{ type: 'spring', damping: 30 }}
-        className="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-gold-accent/15 blur-3xl animate-pulse-slow"
+        className="absolute -bottom-32 -right-32 w-[28rem] h-[28rem] rounded-full bg-gold-accent/18 blur-[100px] animate-pulse-slow"
       />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-rose-glow/10 blur-3xl" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-indigo-500/15 blur-[120px]" />
+      <div className="absolute top-2/3 left-1/3 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-rose-glow/15 blur-[100px]" />
 
       {/* Twinkling Stars */}
       {stars.map((star) => (

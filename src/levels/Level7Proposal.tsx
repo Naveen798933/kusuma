@@ -323,7 +323,7 @@ export const Level7Proposal: React.FC = () => {
                 transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
                 whileTap={{ scale: 0.96 }}
                 onClick={handleYes}
-                className="w-full py-4 px-8 rounded-2xl bg-gradient-to-r from-rose-hot via-rose-glow to-rose-hot text-white font-extrabold text-lg tracking-wider shadow-[0_0_30px_rgba(255,77,141,0.7)] border border-white/40 active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full py-4 px-8 rounded-2xl bg-gradient-to-r from-rose-hot via-rose-glow to-rose-hot text-white font-extrabold text-lg tracking-wider shadow-[0_0_35px_rgba(255,77,141,0.7),inset_0_1px_1.5px_rgba(255,255,255,0.7)] border border-white/40 active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Heart className="w-5 h-5 fill-white text-white animate-bounce" />
                 <span>YES! 💖🤞</span>
@@ -347,7 +347,7 @@ export const Level7Proposal: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="w-full flex flex-col items-center text-center"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-accent/20 border border-gold-accent/40 text-gold-accent text-xs font-bold uppercase tracking-widest mb-3 shadow-[0_0_15px_rgba(255,207,107,0.4)]">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-pill border border-gold-accent/40 text-gold-accent text-xs font-bold uppercase tracking-widest mb-3 shadow-[0_0_15px_rgba(255,207,107,0.3)]">
               <Sparkles className="w-4 h-4 text-gold-accent" />
               <span>BEST FRIENDS FOREVER! 🎉💖</span>
               <Sparkles className="w-4 h-4 text-gold-accent" />
@@ -364,15 +364,17 @@ export const Level7Proposal: React.FC = () => {
             {/* The Downloadable Moment Certificate Card */}
             <div
               ref={cardRef}
-              className="w-full max-w-sm rounded-3xl p-5 mb-4 relative overflow-hidden border border-rose-hot/40 shadow-2xl text-left"
+              className="w-full max-w-sm rounded-3xl p-5 mb-4 relative overflow-hidden border border-white/30 shadow-[0_20px_50px_rgba(0,0,0,0.6),0_0_35px_rgba(255,77,141,0.25)] text-left"
               style={{
-                background: 'linear-gradient(135deg, #26123e 0%, #1a0b2e 50%, #3d1d60 100%)',
+                background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.14) 0%, rgba(38, 18, 62, 0.85) 45%, rgba(13, 4, 23, 0.95) 100%)',
+                backdropFilter: 'blur(20px)',
+                WebkitBackdropFilter: 'blur(20px)',
               }}
             >
-              <div className="absolute -top-12 -right-12 w-36 h-36 rounded-full bg-rose-hot/20 blur-2xl" />
-              <div className="absolute -bottom-12 -left-12 w-36 h-36 rounded-full bg-gold-accent/20 blur-2xl" />
+              <div className="absolute -top-12 -right-12 w-40 h-40 rounded-full bg-rose-hot/25 blur-3xl pointer-events-none" />
+              <div className="absolute -bottom-12 -left-12 w-40 h-40 rounded-full bg-gold-accent/25 blur-3xl pointer-events-none" />
 
-              <div className="flex items-center justify-between border-b border-white/10 pb-3 mb-3">
+              <div className="flex items-center justify-between border-b border-white/15 pb-3 mb-3">
                 <div>
                   <div className="text-[10px] tracking-widest uppercase text-gold-accent font-semibold">
                     LEVEL UP: OUR STORY
@@ -388,13 +390,13 @@ export const Level7Proposal: React.FC = () => {
                 <div className="font-script text-3xl sm:text-4xl text-rose-hot font-bold mb-1">
                   {herName} & {myName}
                 </div>
-                <div className="inline-flex items-center gap-1 text-xs text-white/90 font-medium bg-white/10 px-3 py-1 rounded-full">
+                <div className="inline-flex items-center gap-1 text-xs text-white/90 font-medium bg-white/10 px-3.5 py-1 rounded-full border border-white/15">
                   <CheckCircle2 className="w-3.5 h-3.5 text-rose-soft" />
                   <span>Officially Best Friends Forever & Ever 🤞✨</span>
                 </div>
               </div>
 
-              <div className="border-t border-white/10 pt-3 flex items-center justify-between text-[11px] text-white/60">
+              <div className="border-t border-white/15 pt-3 flex items-center justify-between text-[11px] text-white/70">
                 <span>Date: {CONFIG.proposalDate}</span>
                 <span className="text-rose-blush font-semibold">💖 100% Cleared</span>
               </div>
@@ -407,7 +409,7 @@ export const Level7Proposal: React.FC = () => {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  className="mb-3 px-3 py-1.5 rounded-full bg-gold-accent/20 border border-gold-accent/40 text-xs text-gold-accent font-semibold"
+                  className="mb-3 px-3.5 py-1.5 rounded-full glass-pill border border-gold-accent/40 text-xs text-gold-accent font-semibold"
                 >
                   {cardStatusMessage}
                 </motion.div>
@@ -423,15 +425,15 @@ export const Level7Proposal: React.FC = () => {
                   value={customReplyNote}
                   onChange={(e) => setCustomReplyNote(e.target.value)}
                   placeholder="Add a sweet message to send back... (optional)"
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-plum-800/80 border border-rose-soft/30 text-white placeholder-white/30 text-xs focus:outline-none focus:border-rose-hot transition-all"
+                  className="glass-input w-full px-4 py-3 rounded-2xl text-white placeholder-white/40 text-xs transition-all"
                 />
               </div>
 
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-2 gap-2.5">
                 <button
                   onClick={handleDownloadCard}
                   disabled={isDownloading}
-                  className="py-3 px-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/20 active:scale-95 transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-sm"
+                  className="py-3 px-3 rounded-2xl glass-pill hover:border-gold-accent/50 text-white font-semibold text-xs active:scale-95 transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-md"
                 >
                   <Download className="w-4 h-4 text-gold-accent" />
                   <span>{isDownloading ? 'Saving...' : 'Save Card 📸'}</span>
@@ -442,7 +444,7 @@ export const Level7Proposal: React.FC = () => {
                     sound.playCelebrationFanfare();
                     fireProposalFireworks();
                   }}
-                  className="py-3 px-3 rounded-xl bg-rose-hot/20 hover:bg-rose-hot/30 text-rose-blush font-semibold text-xs border border-rose-hot/40 active:scale-95 transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-sm"
+                  className="py-3 px-3 rounded-2xl glass-button text-rose-blush font-semibold text-xs border border-rose-hot/40 active:scale-95 transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-md"
                 >
                   <span>🎉 More Confetti!</span>
                 </button>
@@ -450,7 +452,7 @@ export const Level7Proposal: React.FC = () => {
 
               <button
                 onClick={handleShareMoment}
-                className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-white font-bold text-xs sm:text-sm shadow-lg shadow-emerald-600/30 active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full py-4 px-4 rounded-2xl bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 hover:brightness-105 text-white font-extrabold text-xs sm:text-sm shadow-[0_0_25px_rgba(16,185,129,0.4),inset_0_1px_1.5px_rgba(255,255,255,0.4)] border border-white/30 active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Send to {myName} on WhatsApp 💌</span>

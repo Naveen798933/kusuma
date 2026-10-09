@@ -4,6 +4,7 @@ import { useGameStore } from './store/gameStore';
 import { BackgroundParticles } from './components/BackgroundParticles';
 import { TopBar } from './components/TopBar';
 import { PhotoReveal } from './components/PhotoReveal';
+import { Footer } from './components/Footer';
 
 // Level mini-games
 import { SplashScreen } from './levels/SplashScreen';
@@ -66,6 +67,8 @@ export const App: React.FC = () => {
             {renderActiveScreen()}
           </AnimatePresence>
         </main>
+
+        <Footer />
       </div>
     </div>
   );

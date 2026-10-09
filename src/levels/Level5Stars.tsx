@@ -63,13 +63,13 @@ export const Level5Stars: React.FC = () => {
       title="Stars Align 🌌"
       subtitle="Connect the glowing stars in sequence to trace our constellation"
       badge={
-        <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-hot/20 border border-rose-hot/40 text-xs font-semibold text-rose-blush shadow-sm">
+        <div className="flex items-center gap-1.5 px-3.5 py-1 rounded-full glass-pill border border-rose-hot/40 text-xs font-semibold text-rose-blush shadow-sm">
           <Sparkles className="w-3.5 h-3.5 text-gold-accent" />
           <span>Tap Star: #{nextExpectedStar + 1}</span>
         </div>
       }
     >
-      <div className="w-full max-w-[340px] aspect-square glass-card rounded-3xl relative overflow-hidden border border-rose-soft/20 shadow-2xl p-4 flex items-center justify-center select-none">
+      <div className="w-full max-w-[340px] aspect-square glass-card rounded-3xl relative overflow-hidden border border-white/20 shadow-2xl p-4 flex items-center justify-center select-none">
         {/* Constellation SVG Lines & Fill */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none z-10">
           <defs>

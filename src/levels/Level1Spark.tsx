@@ -95,19 +95,19 @@ export const Level1Spark: React.FC = () => {
       title="First Spark ✨"
       subtitle="Tap the floating glowing sparks before time runs out!"
       badge={
-        <div className="flex items-center gap-3">
-          <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-hot/20 border border-rose-hot/40 text-xs font-semibold text-rose-blush shadow-sm">
+        <div className="flex items-center gap-2.5">
+          <div className="flex items-center gap-1.5 px-3 py-1 rounded-full glass-pill border border-rose-hot/40 text-xs font-semibold text-rose-blush shadow-sm">
             <Sparkles className="w-3.5 h-3.5 text-rose-glow" />
             <span>Sparks: {collected} / {TARGET_COUNT}</span>
           </div>
-          <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/40 border border-white/10 text-xs font-semibold text-white/80">
+          <div className="flex items-center gap-1.5 px-3 py-1 rounded-full glass-pill border border-white/15 text-xs font-semibold text-white/90">
             <Timer className="w-3.5 h-3.5 text-gold-accent" />
             <span>{timeLeft}s</span>
           </div>
         </div>
       }
     >
-      <div className="w-full h-80 sm:h-96 glass-card rounded-3xl relative overflow-hidden border border-rose-soft/20 shadow-2xl flex items-center justify-center select-none">
+      <div className="w-full h-80 sm:h-96 glass-card rounded-3xl relative overflow-hidden border border-white/20 shadow-2xl flex items-center justify-center select-none">
         <div className="absolute top-3 text-[11px] text-white/40 tracking-wider uppercase font-medium pointer-events-none">
           Tap each glowing spark!
         </div>

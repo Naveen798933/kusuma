@@ -179,16 +179,16 @@ export const Level4Catch: React.FC = () => {
   return (
     <LevelShell
       levelNumber={4}
-      title="Catch the Love 💌"
+      title="Catch Good Vibes 💌"
       subtitle="Slide the basket to catch hearts & letters, dodge broken hearts!"
       badge={
         <div className="flex items-center gap-2">
-          <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-hot/20 border border-rose-hot/40 text-xs font-semibold text-rose-blush shadow-sm">
+          <div className="flex items-center gap-1.5 px-3.5 py-1 rounded-full glass-pill border border-rose-hot/40 text-xs font-semibold text-rose-blush shadow-sm">
             <Trophy className="w-3.5 h-3.5 text-gold-accent" />
             <span>Score: {score} / {TARGET_SCORE}</span>
           </div>
-          <div className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/10 text-[11px] font-medium text-white/80">
-            <Sparkles className="w-3 h-3 text-rose-soft" />
+          <div className="flex items-center gap-1 px-3 py-1 rounded-full glass-pill border border-white/15 text-[11px] font-medium text-white/90">
+            <Sparkles className="w-3 h-3 text-gold-accent" />
             <span>💌 = +2</span>
           </div>
         </div>
@@ -200,7 +200,7 @@ export const Level4Catch: React.FC = () => {
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
         onPointerCancel={handlePointerUp}
-        className="w-full h-80 sm:h-96 glass-card rounded-3xl relative overflow-hidden border border-rose-soft/20 shadow-2xl select-none cursor-ew-resize touch-none"
+        className="w-full h-80 sm:h-96 glass-card rounded-3xl relative overflow-hidden border border-white/20 shadow-2xl select-none cursor-ew-resize touch-none"
       >
         {/* Falling objects */}
         {items.map((item) => (

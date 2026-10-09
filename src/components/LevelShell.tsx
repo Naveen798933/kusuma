@@ -26,17 +26,17 @@ export const LevelShell: React.FC<LevelShellProps> = ({
     >
       {/* Header card with Title and Subtitle */}
       <div className="text-center mb-4 relative">
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-hot/20 border border-rose-hot/40 text-rose-blush text-xs font-semibold tracking-wide uppercase mb-1.5 shadow-[0_0_12px_rgba(255,77,141,0.25)]">
+        <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full glass-pill border border-white/20 text-rose-blush text-xs font-semibold tracking-wider uppercase mb-1.5 shadow-[0_0_15px_rgba(255,77,141,0.25)]">
           <span>Level {levelNumber}</span>
           <span className="text-gold-accent">•</span>
           <span>Challenge</span>
         </div>
 
-        <h2 className="text-2xl font-extrabold tracking-tight text-white drop-shadow-sm flex items-center justify-center gap-2">
+        <h2 className="text-2xl font-extrabold tracking-tight text-white drop-shadow-md flex items-center justify-center gap-2">
           {title}
         </h2>
 
-        <p className="text-xs text-rose-blush/80 max-w-xs mx-auto mt-1 font-medium">
+        <p className="text-xs text-rose-blush/85 max-w-xs mx-auto mt-1 font-medium">
           {subtitle}
         </p>
 

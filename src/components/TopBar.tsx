@@ -44,7 +44,7 @@ export const TopBar: React.FC = () => {
   return (
     <>
       <header className="sticky top-0 z-40 w-full px-3 py-2.5 max-w-md mx-auto">
-        <div className="glass-card rounded-2xl px-3.5 py-2 flex items-center justify-between border border-rose-soft/20 backdrop-blur-md">
+        <div className="glass-card rounded-2xl px-3.5 py-2 flex items-center justify-between border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.45)]">
           {/* Logo & Game Title with Easter Egg */}
           <div
             onClick={handleLogoTap}
@@ -73,7 +73,7 @@ export const TopBar: React.FC = () => {
           </div>
 
           {/* 7 Hearts Progress Bar */}
-          <div className="flex items-center gap-1 px-1.5 py-1 rounded-full bg-black/30 border border-white/10">
+          <div className="flex items-center gap-1 px-2 py-1 rounded-full glass-pill border border-white/15">
             {[1, 2, 3, 4, 5, 6, 7].map((lvl) => {
               const isFilled = completedLevels.includes(lvl);
               const isCurrent = currentLevel === lvl && stage !== 'splash';
@@ -102,7 +102,7 @@ export const TopBar: React.FC = () => {
           <div className="flex items-center gap-1.5">
             <button
               onClick={handleToggleAudio}
-              className="p-1.5 rounded-xl bg-white/10 hover:bg-white/20 active:scale-90 text-rose-blush transition-all flex items-center gap-1"
+              className="p-1.5 rounded-xl glass-pill hover:border-rose-hot/40 active:scale-90 text-rose-blush transition-all flex items-center gap-1 shadow-sm"
               aria-label={soundEnabled ? 'Mute Audio' : 'Unmute Audio'}
             >
               {soundEnabled ? (
@@ -124,7 +124,7 @@ export const TopBar: React.FC = () => {
                 sound.playTap();
                 setShowScrapbook(true);
               }}
-              className="p-1.5 rounded-xl bg-white/10 hover:bg-white/20 active:scale-90 text-rose-blush transition-all"
+              className="p-1.5 rounded-xl glass-pill hover:border-gold-accent/40 active:scale-90 text-rose-blush transition-all shadow-sm"
               title="Open Memory Scrapbook"
               aria-label="Open Memory Scrapbook"
             >
@@ -133,7 +133,7 @@ export const TopBar: React.FC = () => {
 
             <button
               onClick={() => setShowResetConfirm(true)}
-              className="p-1.5 rounded-xl bg-white/5 hover:bg-white/15 active:scale-90 text-white/40 hover:text-white transition-all"
+              className="p-1.5 rounded-xl glass-pill hover:border-white/40 active:scale-90 text-white/40 hover:text-white transition-all shadow-sm"
               title="Reset progress"
               aria-label="Reset Game"
             >
