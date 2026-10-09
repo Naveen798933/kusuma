@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overscroll-behavior-y: none;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Romantic glass card */
+  .glass-card {
+    background: rgba(38, 18, 62, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 117, 160, 0.25);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 77, 141, 0.15);
+  }
+
+  .glass-pill {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  /* Polaroid style photo frame */
+  .polaroid-frame {
+    background: #ffffff;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45), 0 0 25px rgba(255, 77, 141, 0.2);
+    border-radius: 12px;
+    padding: 12px 12px 24px 12px;
+  }
+
+  /* Custom animated glow */
+  .glow-rose {
+    filter: drop-shadow(0 0 10px rgba(255, 77, 141, 0.7));
+  }
+
+  .glow-gold {
+    filter: drop-shadow(0 0 10px rgba(255, 207, 107, 0.8));
+  }
+}
+
+/* Custom romantic scrollbar if needed */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0417;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff4d8d;
+  border-radius: 9999px;
+}
